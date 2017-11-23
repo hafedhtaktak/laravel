@@ -9,7 +9,7 @@ class film extends Model
     //
 
     protected $fillable = [
-        'nom', 'auteur', 'date_sortie','disponible','datecreation','datesortie','datemodification'
+        'nom', 'auteur', 'date_sortie','disponible','datecreation','datesortie','datemodification','genre_id'
     ];
 
     public function genre()

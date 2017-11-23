@@ -30,44 +30,55 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="description" class="col-sm-3 control-label">Description : </label>
+                            <label for="nom" class="col-sm-3 control-label">Nom : </label>
                             <div class="col-sm-9">
-                                <input type="text" name="description" value="{{ old('description') }}" class="form-control">
-                                @if ($errors->has('description'))
+                                <input type="text" name="nom" value="{{ old('nom') }}" class="form-control">
+                                @if ($errors->has('nom'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
+                                        <strong>{{ $errors->first('nom') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="price" class="col-sm-3 control-label">Price : </label>
+                            <label for="auteur" class="col-sm-3 control-label">Price : </label>
                             <div class="col-sm-9">
-                                <input type="text" name="price" value="{{ old('price') }}" class="form-control" required>
+                                <input type="text" name="auteur" value="{{ old('auteur') }}" class="form-control" required>
                                 @if ($errors->has('price'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('price') }}</strong>
+                                        <strong>{{ $errors->first('auteur') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="price" class="col-sm-3 control-label">Website : </label>
+                            <label for="datesortie" class="col-sm-3 control-label">datesortie : </label>
                             <div class="col-sm-9">
-                                <input type="text" name="site" value="{{ old('site') }}" class="form-control" required>
-                                @if ($errors->has('site'))
+                                <input type="text" name="datesortie" value="{{ old('datesortie') }}" class="form-control" required>
+                                @if ($errors->has('datesortie'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('site') }}</strong>
+                                        <strong>{{ $errors->first('datesortie') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="price" class="col-sm-3 control-label">Category : </label>
+                        <label for="disponible" class="col-sm-3 control-label">disponible : </label>
+                        <div class="col-sm-9">
+                            <input type="text" name="disponible" value="{{ old('disponible') }}" class="form-control" required>
+                            @if ($errors->has('disponible'))
+                                <span class="help-block">
+                                        <strong>{{ $errors->first('disponible') }}</strong>
+                                    </span>
+                            @endif
+                        </div>
+                </div>
+                        <div class="form-group">
+                            <label for="genre" class="col-sm-3 control-label">genre : </label>
                             <div class="col-sm-9">
-                                <select name="category_id" id="category_id">
+                                <select name="genre_id" id="genre_id">
                                     @foreach($genres as $genre)
-                                        <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                                        <option value="{{ $genre->id }}">{{ $genre->nom }}</option>
                                     @endforeach
                                 </select>
                             </div>
